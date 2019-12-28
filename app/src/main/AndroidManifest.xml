@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.al3ra8e.hucalendar">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        android:name=".connection.AppController"
+        android:icon="@drawable/hu_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        
+        >
+
+
+        <activity android:name=".other.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".other.LogIn" />
+        <activity android:name=".studentPackage.SignUp" />
+        <activity android:name=".searchPackage.SearchActivity"
+            />
+        <activity
+            android:name=".eventPackage.EventActivity"
+            android:label="@string/title_activity_event"
+            android:theme="@style/EventActivityStyle" />
+        <activity
+            android:name=".studentPackage.StudentActivity"
+            android:label="@string/title_activity_student"
+            android:theme="@style/EventActivityStyle" />
+        <activity
+            android:name=".eventPackage.MaterialsActivity"
+            android:label="@string/title_activity_materials"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".servicesPackage.MyReceiver"
+            android:priority="2147483647">
+            <intent-filter>
+                <action android:name="com.example.Broadcast" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".servicesPackage.CommentNotificationService"
+            android:exported="false" />
+        <service
+            android:name=".servicesPackage.EventNotificationService"
+            android:exported="false" />
+        <service
+            android:name=".servicesPackage.EventRequestNotificationService"
+            android:exported="false" />
+
+        <activity
+            android:name=".adminPackage.AdminMain"
+            android:label="@string/title_activity_admin_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".creatorsPackage.CreatorMain"
+            android:label="@string/title_activity_creator_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".creatorsPackage.AddEventActivity"></activity>
+
+    </application>
+
+</manifest>

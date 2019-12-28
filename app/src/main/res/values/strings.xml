@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">HuCalendar</string>
+    <string name="msg">"this permissions are required for work so accept them"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_student">studentActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_looklike">looklike</string>
+    <string name="event_title">Event title</string>
+
+    <string-array name="categories">
+        <item>action</item>
+        <item>panic</item>
+        <item>drama</item>
+        <item>category4</item>
+        <item>category5</item>
+        <item>category6</item>
+    </string-array>
+    <string-array name="faculties">
+        <item>المواد الطبيعية والبيئة</item>
+        <item>الاقتصاد والعلوم الادارية</item>
+        <item>العلوم التربوية</item>
+        <item>الهندسة</item>
+        <item>العلوم الطبية المساندة</item>
+        <item>التمريض</item>
+        <item>الملكة رانيا للسياحة والتراث</item>
+        <item>تكنولوجيا المعلومات</item>
+        <item>الملكة رانيا للطفولة</item>
+        <item>الموارد الطبيعية والبيئة</item>
+        <item>العلوم</item>
+        <item>الاداب</item>
+        <item>الطب البشري</item>
+        <item>العلوم الصيدلانية</item>
+        <item>اكادمية الاراضي الجافة</item>
+    </string-array>
+    <string name="title_activity_add_event">addEventActivity</string>
+    <string name="title_activity_materials">MaterialsActivity</string>
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="title_activity_admin_main">adminMain</string>
+    <string name="new_event_request_notification_title_template">New event request: %1$s</string>
+    <string name="title_activity_creator_main">CreatorMain</string>
+</resources>

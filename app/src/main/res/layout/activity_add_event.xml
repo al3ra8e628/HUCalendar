@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.al3ra8e.hucalendar.creatorsPackage.AddEventActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:id="@+id/eventCover"
+            android:background="@drawable/default_cover">
+
+            <ImageButton
+                android:id="@+id/updateCoverButton"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                android:onClick="changePictureAction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/update_pic"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:background="@color/background"
+                android:hint="Event title "
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:id="@+id/eventTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Event Date"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imageButton2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:onClick="showDatePicker"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/calendar_icon"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginRight="12dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Event Time"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imageButton22"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/imageButton22"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:onClick="showTimePicker"
+                app:srcCompat="@drawable/timer_icon"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginRight="12dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Faculty :"
+            android:textStyle="bold" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/faculties"
+                android:spinnerMode="dialog"
+                android:gravity="center_vertical"
+                android:background="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </android.support.v7.widget.AppCompatSpinner>
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Category :"
+            android:textStyle="bold" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:id="@+id/categories"
+                android:gravity="center_vertical"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:spinnerMode="dialog"
+                android:background="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0">
+
+            </android.support.v7.widget.AppCompatSpinner>
+        </android.support.constraint.ConstraintLayout>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:onClick="uploadEventAction"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+</ScrollView>

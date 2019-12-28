@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:id="@+id/swipeRefreshLayout"
+    android:background="@color/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_event"
+    tools:context="com.example.hucalendar.eventPackage.EventActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="event title"
+            android:textStyle="bold"
+            android:id="@+id/eventTitle"
+            android:layout_marginBottom="7dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:paddingLeft="25dp"
+            android:background="#b6b6b6"
+            android:textSize="18dp"
+            />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150dp"
+                android:layout_height="41dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:text="materials"
+                android:onClick="openMaterialsActivity"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/attendBtn"
+                android:layout_width="150dp"
+                android:layout_height="41dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:text="Attend"
+                android:onClick="attendAction"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/attendNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="3000 person attend "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attendBtn"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attendBtn"
+                app:srcCompat="@drawable/heart"
+                app:layout_constraintVertical_bias="0.90999997" />
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+                android:id="@+id/commentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/commentListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:scrollbars="vertical"
+                    />
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

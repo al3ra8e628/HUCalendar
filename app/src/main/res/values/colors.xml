@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#bd0302</color>
+    <color name="colorPrimaryDark">#db0101</color>
+    <color name="colorAccent">#BD0302</color>
+    <color name="shit">#ffffff</color>
+    <color name="background">#EBEBEB</color>
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#ffff00</color>
+    <color name="event_indicator_color">#BD0302</color>
+    <color name="materialBackground">#4867ff</color>
+    <color name="materialListBackground">#a7b6ff</color>
+</resources>

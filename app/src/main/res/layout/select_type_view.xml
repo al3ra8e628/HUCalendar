@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    app:layout_collapseParallaxMultiplier="1.0">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/select_part_background">
+
+
+        <Button
+            android:id="@+id/selectionBarStudent"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="30"
+            android:background="@drawable/select_part_background"
+            android:elevation="0dp"
+            android:padding="5dp"
+            android:text="student "
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/selectionBarAdmin"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <Button
+            android:id="@+id/selectionBarAdmin"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/selectionBarStudent"
+            android:layout_weight="30"
+            android:textColor="@color/white"
+            android:background="@drawable/selected_button_background"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="admin"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="33dp" />
+
+        <Button
+            android:id="@+id/selectionBarCreator"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="30"
+            android:background="@drawable/select_part_background"
+            android:padding="5dp"
+            android:text=" creator"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/selectionBarAdmin"
+            tools:layout_editor_absoluteY="33dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

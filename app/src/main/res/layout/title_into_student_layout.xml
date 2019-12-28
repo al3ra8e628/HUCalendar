@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#b6b6b6"
+    tools:showIn="@layout/activity_student"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="attended events"
+    android:gravity="center_vertical"
+    android:textColor="@color/black"
+    android:paddingLeft="25dp"
+    android:textSize="15dp"
+    />
+</LinearLayout>
